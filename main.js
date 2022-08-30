@@ -1,40 +1,41 @@
-const { app, BrowserWindow, Menu } = require('electron')
-const log = require('electron-log')
+const { app, BrowserWindow, Menu } = require('electron');
+const log = require('electron-log');
 
 // Set env
-process.env.NODE_ENV = 'development'
+process.env.NODE_ENV = 'development';
 
-const isDev = process.env.NODE_ENV !== 'production' ? true : false
-const isMac = process.platform === 'darwin' ? true : false
+const isDev = process.env.NODE_ENV !== 'production' ? true : false;
+const isMac = process.platform === 'darwin' ? true : false;
 
-let mainWindow
+let mainWindow;
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    title: 'APP NAME',
-    width: isDev ? 800 : 500,
-    height: 600,
+    title: 'SysTop',
+    width: isDev ? 800 : 3550,
+    height: 500,
     icon: `${__dirname}/assets/icons/icon.png`,
     resizable: isDev ? true : false,
     backgroundColor: 'white',
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
     },
-  })
+  });
 
   if (isDev) {
-    mainWindow.webContents.openDevTools()
+    mainWindow.webContents.openDevTools();
   }
 
-  mainWindow.loadFile('./app/index.html')
+  mainWindow.loadFile('./app/index.html');
 }
 
 app.on('ready', () => {
-  createMainWindow()
+  createMainWindow();
 
-  const mainMenu = Menu.buildFromTemplate(menu)
-  Menu.setApplicationMenu(mainMenu)
-})
+  const mainMenu = Menu.buildFromTemplate(menu);
+  Menu.setApplicationMenu(mainMenu);
+});
 
 const menu = [
   ...(isMac ? [{ role: 'appMenu' }] : []),
@@ -54,18 +55,18 @@ const menu = [
         },
       ]
     : []),
-]
+];
 
 app.on('window-all-closed', () => {
   if (!isMac) {
-    app.quit()
+    app.quit();
   }
-})
+});
 
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
-    createMainWindow()
+    createMainWindow();
   }
-})
+});
 
-app.allowRendererProcessReuse = true
+app.allowRendererProcessReuse = true;

@@ -1,5 +1,33 @@
 # sys-top-electron-20
 
+> Node utils used to get system info
+
+- Run `npm run dev`
+
+# Useful Documentation
+
+> Main Node OS Documentation
+
+- [Node OS](https://nodejs.org/api/os.html)
+
+# node-os-utils
+
+> Actual NPM Libary used to get system info
+
+- [node-os-utils](https://www.npmjs.com/package/node-os-utils/v/1.2.2)
+
+- Monitor vital signs of your server :
+  - CPU average usage
+  - Free and used drive space
+  - Free and used memory space
+  - Operating System
+  - All processes running
+  - TTY/SSH opened
+  - Total opened files
+  - Network speed (input and output)
+
+# Start Application in Development Mode
+
 - Run `npm run dev`
 
 # devDependencies
