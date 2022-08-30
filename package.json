@@ -1,27 +1,33 @@
 {
-  "name": "electron-starter",
-  "productName": "APP NAME",
-  "version": "1.0.0",
-  "description": "Simple starter package for Electron apps",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron .",
-    "dev": "nodemon --exec electron .",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
-    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"APP NAME\"",
-    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
-  },
-  "keywords": [
-    "Electron"
-  ],
-  "author": "Brad Traversy",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^9.0.0",
-    "electron-packager": "^14.2.1",
-    "nodemon": "^2.0.3"
-  },
-  "dependencies": {
-    "electron-log": "^4.1.2"
-  }
+    "name": "sys-top-electron-20",
+    "version": "1.0.0",
+    "description": "Monitor your CPU",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "electron .",
+        "dev": "nodemon --exec electron .",
+        "build-package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+        "build-package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"APP NAME\"",
+        "build-package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mogrady-professional/sys-top-electron-20.git"
+    },
+    "author": "Michael O Grady",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mogrady-professional/sys-top-electron-20/issues"
+    },
+    "homepage": "https://github.com/mogrady-professional/sys-top-electron-20#readme",
+    "devDependencies": {
+        "electron": "^20.1.0",
+        "electron-packager": "^14.2.1",
+        "nodemon": "^2.0.19"
+    },
+    "dependencies": {
+        "electron-log": "^4.1.2",
+        "node-os-utils": "^1.2.2"
+    }
 }
