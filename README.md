@@ -19,6 +19,7 @@ SysTop is a executable desktop application developed JavaScript on the Electron 
 - [Desktop Notifications](#desktop-notifications)
 - [Start Application in Development Mode](#start-application-in-development-mode)
 - [Build Application](#build-application)
+- [Instructions](#instructions)
 
 # Images
 
@@ -113,3 +114,10 @@ Settings are stored in a JSON file persisted to the following local directory:
 # Build Application
 
 - Run `npm run build-package-win`
+
+# Instructions
+
+1. Clone repo and run `npm install`
+2. Run `npm run dev` to start application in development mode
+3. Run `npm run build-package-win` to build application for Windows
+4. Application will be found in `sys-top-electron-20\release-builds\sys-top-electron-20-win32-x64`
