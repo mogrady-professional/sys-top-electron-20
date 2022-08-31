@@ -42,6 +42,7 @@ SysTop is a executable desktop application developed JavaScript on the Electron 
     - Free Memory Percentage
   - Ability to set CPU Overload Warning Level
   - Ability to set alert frequency
+  - System Notifications once threshold is reached
 
 # Settings storage
 
