@@ -1,7 +1,7 @@
 {
     "name": "sys-top-electron-20",
     "version": "1.0.0",
-    "description": "Monitor your CPU",
+    "description": "Monitor your system CPU",
     "main": "main.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
